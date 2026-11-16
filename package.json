@@ -4,7 +4,7 @@
   "description": "Runs the HostSherlock MCP server over stdio, for MCP clients that cannot connect to a remote server URL.",
   "type": "module",
   "bin": {
-    "hostsherlock-mcp": "./dist/cli.js"
+    "hostsherlock-mcp": "dist/cli.js"
   },
   "main": "./dist/proxy.js",
   "types": "./dist/proxy.d.ts",
