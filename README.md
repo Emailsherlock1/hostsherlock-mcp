@@ -27,7 +27,7 @@ Use this package when your client only takes a command to start, as in a `comman
 }
 ```
 
-Requires Node.js 18 or newer.
+Requires Node.js 20 or newer.
 
 ## Environment variables
 
