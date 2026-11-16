@@ -1,0 +1,58 @@
+{
+  "name": "@hostsherlock/mcp",
+  "version": "0.1.0",
+  "description": "Runs the HostSherlock MCP server over stdio, for MCP clients that cannot connect to a remote server URL.",
+  "type": "module",
+  "bin": {
+    "hostsherlock-mcp": "./dist/cli.js"
+  },
+  "main": "./dist/proxy.js",
+  "types": "./dist/proxy.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/proxy.d.ts",
+      "import": "./dist/proxy.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && chmod +x dist/cli.js",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "dmarc",
+    "spf",
+    "dkim",
+    "email-deliverability",
+    "hostsherlock"
+  ],
+  "homepage": "https://www.hostsherlock.com/mcp",
+  "bugs": {
+    "url": "https://github.com/Emailsherlock1/hostsherlock-mcp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emailsherlock1/hostsherlock-mcp.git"
+  },
+  "mcpName": "com.hostsherlock/mcp",
+  "license": "MIT",
+  "author": "HostSherlock",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "typescript": "^5.9.3",
+    "zod": "^4.6.7"
+  }
+}
